@@ -1,0 +1,68 @@
+/*********************************************************/
+/*Css for formatting the Image pre-view on the add item form */
+
+input[type="file"] {
+  display: block;
+}
+
+.imageThumb {
+  max-height: 75px;
+  border: 2px solid;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.pip {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+}
+
+.remove {
+  display: block;
+  background: #444;
+  border: 1px solid black;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.remove:hover {
+  background: white;
+  color: black;
+}
+/*********************************************************/
+
+
+
+/*********************************************************/
+/* Css for scaling Images in slider on the item page based on 
+mobile or large*/
+
+.img-responsive {
+  max-width: 60%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .img-responsive {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+}
+
+@media (min-width:1500px) {
+  .modal-confirm {
+    max-width: 30%;
+  }
+}
+/*********************************************************/
+
+
+/* Font size class for error messages on item form */
+.small-text {
+  font-size: small;
+}

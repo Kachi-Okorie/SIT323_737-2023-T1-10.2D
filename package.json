@@ -1,0 +1,58 @@
+{
+  "name": "trade-bi-bata",
+  "version": "1.0.0",
+  "description": "TradeBiBata Web Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha --reporter spec"
+      },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kachi-Okorie/SIT725-T3-2022-Team1_Repo.git"
+  },
+  "author": "Onyedikachi Okorie, Philip Williams, Jingcheng Xu, Raja Yarlagadda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kachi-Okorie/SIT725-T3-2022-Team1_Repo/issues"
+  },
+  "homepage": "https://github.com/Kachi-Okorie/SIT725-T3-2022-Team1_Repo#readme",
+  "dependencies": {
+    "alert": "^5.1.4",
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "chai": "^4.3.7",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "express-session": "^1.17.3",
+    "fs": "^0.0.1-security",
+    "handlebars": "^4.7.7",
+    "http": "^0.0.1-security",
+    "httpserver": "^0.3.0",
+    "i": "^0.3.7",
+    "joi": "^17.7.0",
+    "jquery": "^3.6.3",
+    "jsonwebtoken": "^9.0.0",
+    "mocha": "^10.2.0",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.8.3",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage": "^0.4.1",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "socket.io": "^4.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "prettier": "^2.8.3",
+    "supertest": "^6.3.3"
+  }
+}
