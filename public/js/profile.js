@@ -80,7 +80,7 @@ const displayCard = (item) => {
     return html;
 };
 
-//this below function displays all the added items to his profile page if anything is available if not it would be null 
+//this below function displays all the added items to the profile page if anything is available if not it would be null 
 function display() {
     const queryString = window.location.search;
     $.ajax({

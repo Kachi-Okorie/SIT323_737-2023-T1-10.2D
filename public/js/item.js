@@ -2,9 +2,6 @@ const itemSocket = io("/Notifications");
 let itemDetails;
 
 /*****************************************************************************
-Function: $(document).ready
-Author: Phil Williams
-
 Purpose: jQuery Function that runs once the DOM is loaded. Initialises a number 
 of materialize css components and jquery events.
 *****************************************************************************/
@@ -15,9 +12,6 @@ $(document).ready(function () {
 });
 
 /*****************************************************************************
-Function: getItem
-Author: Phil Williams
-
 Purpose: This function sends the ID in the URL to the /api/item/view route
 and recives the corrisponding item details and passes them to loadItem
 *****************************************************************************/
@@ -41,9 +35,6 @@ function getItem() {
 }
 
 /*****************************************************************************
-Function: loadItem
-Author: Phil Williams
-
 Purpose: This function takes the item output from get items and constructs 
 dynamic HTML to placed on the item.html page
 *****************************************************************************/
@@ -63,11 +54,7 @@ const loadItem = (item) => {
         <div class="card">
             <div class="card-image">`;
 
-    if (item.itemAvailability === "Available") {
-        html += `<div class="btn  green darken-1" id="availabilityFlag">Available</div>`;
-    } else {
-        html += `<div class="btn disabled">${item.itemAvailability}</div>`;
-    }
+    
 
     html += `<a href="chat.html?userID=${item.userID}" class="btn-floating btn-large halfway-fab waves-effect waves-light"><i class="material-icons">message</i></a>
             </div>
@@ -77,18 +64,12 @@ const loadItem = (item) => {
                 <div class = "row">
 
                     <div class = "col s12"><b>Posted by: </b> <a href="/profile.html?userID=${item.userID}">${item.postingUserName}</a></div>       
-                    <div class = "col s12 m6"><b>Condition: </b>${item.itemCondition}</div>
-                    <div class = "col s12 m6"><b>Category: </b>${item.itemCategory}</div>
+                   
                     <div class = "col s12"><b>Description: </b> <br> ${item.itemDescription}</div>
                 </>
                 `;
 
-    if (item.itemColour != "") {
-        html += `<div class = "col s12"><b>Colour: </b>${item.itemColour}</div>`;
-    }
-    if (item.itemSize != "") {
-        html += `<div class = "col s12"><b>Size:"</b>${item.itemSize}</div>`;
-    }
+    
 
     html += `
                 </div>
@@ -103,11 +84,7 @@ const loadItem = (item) => {
     if (item.sameUser) {
         $(".user-buttons").css("visibility", "visible");
     }
-    //Set Update availability drop down to current value in DB ************** Come back an look at this only updating once you click on it.
-    $(`#itemAvailability option[value=${item.itemAvailability}]`).attr(
-        "selected",
-        "selected"
-    );
+  
     //Initialise image carousel and config
     $(".carousel").carousel({
         fullWidth: false,
@@ -138,9 +115,6 @@ const loadItem = (item) => {
 };
 
 /*****************************************************************************
-Function: deleteItem
-Author: Phil Williams
-
 Purpose: This function passes the item ID from the URL to the /api/item/delete
 route. On success a modal is displayed with a messaged and countdown before
 you are redirected to the profile page. countDown is called to perform the 
@@ -169,8 +143,6 @@ const deleteItem = () => {
 };
 
 /*****************************************************************************
-Function: countDown
-Author: Phil Williams
 
 Purpose: This function is called by the delete item fucntion counts down 7
 seconds then redirects to the profile page.
@@ -211,8 +183,6 @@ const updateAvailability = () => {
 };
 
 /*****************************************************************************
-Function: 
-Author: Phil Williams
 
 Purpose: 
 *****************************************************************************/

@@ -1,7 +1,4 @@
 /*****************************************************************************
-Function: $(document).ready
-Author: Phil Williams
-
 Purpose: jQuery Function that runs once the DOM is loaded. Initialises a number 
 of materialize css components and jquery events.
 *****************************************************************************/
@@ -21,9 +18,6 @@ $(document).ready(function () {
 });
 
 /*****************************************************************************
-Function: imgPreview
-Author: Phil Williams
-
 Purpose: This function creates the image preview on the add Item Modal
 *****************************************************************************/
 function imgPreview(e) {
@@ -50,9 +44,6 @@ function imgPreview(e) {
 }
 
 /*****************************************************************************
-Function: itemCondition
-Author: Phil Williams
-
 Purpose: This function checks the item condition on change and adds a hide 
 for the error message if an item is selected
 *****************************************************************************/
@@ -63,8 +54,6 @@ function itemCondition(e) {
 }
 
 /*****************************************************************************
-Function: removeFile
-Author: Phil Williams
 
 Purpose: Code to remove files from the img-upload input when one is deleted
 presently not functional or in use.
@@ -78,9 +67,6 @@ const removeFile = (fileName) => {
 };
 
 /*****************************************************************************
-Function: submitAddItem
-Author: Phil Williams
-
 Purpose: Check the add item form is valid and submits it to the addItemToApp
 function.
 *****************************************************************************/
@@ -128,9 +114,6 @@ const submitAddItem = () => {
 };
 
 /*****************************************************************************
-Function: addItemToApp
-Author: Phil Williams
-
 Purpose: Uses Ajax to post the form to the /api/item/add route. As this is a 
 multipart/form-data processData and contentType are disabled due to the way
 ajax handles these
