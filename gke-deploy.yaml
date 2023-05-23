@@ -1,10 +1,8 @@
 steps:
-...
-# deploy container image to GKE
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - --filename=https://github.com/Kachi-Okorie/SIT323_737-2023-T1-10.2D/blob/main/k8sconfigfile.yaml
-  - --location=australia-southeast2
-  - --cluster=kachi-cluster
+  - --filename=k8sconfigfile.yaml
+  - --location=australia-southeast2-a
+  - --cluster=kachi-cluster2
   
