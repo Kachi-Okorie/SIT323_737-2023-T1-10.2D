@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'australia-southeast2-docker.pkg.dev/sit737-23t1-okorie-158836a/kachisit73710d/dustudentmeetup', '.']
+  args: ['build', '-t', 'australia-southeast2-docker.pkg.dev/sit737-23t1-okorie-158836a/kachisit73710d/dustudentmeetupv2', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'australia-southeast2-docker.pkg.dev/sit737-23t1-okorie-158836a/kachisit73710d/dustudentmeetup']
-images: ['australia-southeast2-docker.pkg.dev/sit737-23t1-okorie-158836a/kachisit73710d/dustudentmeetup']
+  args: ['push', 'australia-southeast2-docker.pkg.dev/sit737-23t1-okorie-158836a/kachisit73710d/dustudentmeetupv2']
+images: ['australia-southeast2-docker.pkg.dev/sit737-23t1-okorie-158836a/kachisit73710d/dustudentmeetupv2']
