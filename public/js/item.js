@@ -160,8 +160,6 @@ function countDown() {
 
 /*****************************************************************************
 Function: updateAvailability
-Author: Phil Williams
-
 Purpose: This function takes the IT id from the URL and new item status from
 itemAvailability dropdown and passes them to them to the
 /api/item/updateavailability route on success page is reloaded.

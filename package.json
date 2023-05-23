@@ -1,7 +1,7 @@
 {
-  "name": "trade-bi-bata",
+  "name": "deakin-student-meetup",
   "version": "1.0.0",
-  "description": "TradeBiBata Web Application",
+  "description": "Deakin Student Meet Up App",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,14 +9,14 @@
       },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kachi-Okorie/SIT725-T3-2022-Team1_Repo.git"
+    "url": "https://github.com/Kachi-Okorie/SIT323_737-2023-T1-10.2D.git"
   },
-  "author": "Onyedikachi Okorie, Philip Williams, Jingcheng Xu, Raja Yarlagadda",
+  "author": "Onyedikachi Okorie",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kachi-Okorie/SIT725-T3-2022-Team1_Repo/issues"
+    "url": "https://github.com/Kachi-Okorie/SIT323_737-2023-T1-10.2D/issues"
   },
-  "homepage": "https://github.com/Kachi-Okorie/SIT725-T3-2022-Team1_Repo#readme",
+  "homepage": "https://github.com/Kachi-Okorie/SIT323_737-2023-T1-10.2D#readme",
   "dependencies": {
     "alert": "^5.1.4",
     "bcrypt": "^5.1.0",

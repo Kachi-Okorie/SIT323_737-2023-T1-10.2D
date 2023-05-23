@@ -2,8 +2,6 @@ const models = require("../models");
 const item = models.itemModels.item;
 
 /*****************************************************************************
-Function: search
-Author: Phil Williams
 
 Purpose: This function receives an input form the post /api/search route.
 based on the search term received it performs a fuzzy search using the MongoDB
@@ -31,8 +29,6 @@ const search = async (req, res) => {
 };
 
 /*****************************************************************************
-Function: searchItems
-Author: Phil Williams
 
 Purpose: This function receives an input form the post /api/search/item route.
 Intended to be used for searching items using a different search index. 

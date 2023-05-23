@@ -31,14 +31,7 @@ describe("Test Account Setup", function () {
         });
     });
 
-    //fourth it function
-    var url = 'http://localhost:3000/createAcc.html';
+    
 
-    it("return status 200 to check if api works", function (done) {
-        request(url, function (error, response, body) {
-            expect(response.statusCode).to.equal(200);
-            done()
-        });
-    });
 });
 

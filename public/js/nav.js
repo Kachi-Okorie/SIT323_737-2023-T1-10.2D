@@ -2,8 +2,6 @@ const noteSocket = io("/Notifications");
 
 /*****************************************************************************
 Function: $(document).ready
-Author: Phil Williams
-
 Purpose: jQuery Function that runs once the DOM is loaded. Initialises a number 
 of materialize css components and jquery events.
 *****************************************************************************/
@@ -20,8 +18,6 @@ $(document).ready(function () {
 
 /*****************************************************************************
 Function: displayUserDetailsNav
-Author: Phil Williams
-
 Purpose: Displays the user details and image on the side nave for mobile views
 *****************************************************************************/
 const displayUserDetailsNav = () => {
@@ -50,7 +46,6 @@ const displayUserDetailsNav = () => {
 
 /*****************************************************************************
 Function: updateSearch
-Author: Phil Williams
 
 Purpose: Component for autocomplete in search field. presently inactive. 
 *****************************************************************************/
@@ -84,7 +79,6 @@ function updateSearch(e) {
 
 /*****************************************************************************
 Function: OpenSearch
-Author: Phil Williams
 
 Purpose: Places the curser in the search field when opened
 *****************************************************************************/
@@ -94,7 +88,6 @@ function OpenSearch() {
 
 /*****************************************************************************
 Function: $(".dropdown-account").dropdown
-Author: Phil Williams
 
 Purpose: Jquery to initialise dropdown on the account button
 *****************************************************************************/
@@ -105,7 +98,6 @@ $(".dropdown-account").dropdown({
 
 /*****************************************************************************
 Function: $(".dropdown-search").dropdown
-Author: Phil Williams
 
 Purpose: Jquery to initialise dropdown on the navbar search
 *****************************************************************************/
@@ -119,7 +111,6 @@ $(".dropdown-search").dropdown({
 
 /*****************************************************************************
 Function: $(".close-button").click
-Author: Phil Williams
 
 Purpose: Click event to close the search bar if the x is clicked
 *****************************************************************************/
@@ -129,7 +120,6 @@ $(".close-button").click(() => {
 
 /*****************************************************************************
 Function: $("#searchSide").on("keyup")
-Author: Phil Williams
 
 Purpose: Event listener for enter press on side search text input
 redirects to the search page with entered search term
@@ -142,7 +132,6 @@ $("#searchSide").on("keyup", function (e) {
 
 /*****************************************************************************
 Function: noteSocket.on("receive-notification")
-Author: Phil Williams
 
 Purpose: This is a socket event listener when the server issues a 
 receive-notification event for the current user 

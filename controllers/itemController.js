@@ -7,9 +7,6 @@ const fs = require("fs");
 const e = require("cors");
 
 /*****************************************************************************
-Function: addItem
-Author: Phil Williams
-
 Purpose: This function receives an input form the post /api/item/add route.
 It saves form entries received from the frontend and saves them to the item
 database. 
@@ -73,9 +70,6 @@ const addItem = async (req, res) => {
 };
 
 /*****************************************************************************
-Function: viewItem
-Author: Phil Williams
-
 Purpose: This function receives an input form the get /api/item/view route.
 Based on the item ID provided it looks up the DB and retrieves the items
 details using the ID of the user that owns the item it also looks up and 
@@ -124,9 +118,6 @@ const viewItem = async (req, res) => {
 };
 
 /*****************************************************************************
-Function: itemImage
-Author: Phil Williams
-
 Purpose: This function receives an input form the get /api/item/itemimage route.
 And returns an image based on the filename provided.
 ******************************************************************************/
@@ -140,9 +131,6 @@ const itemImage = async (req, res) => {
 };
 
 /*****************************************************************************
-Function: deleteItem
-Author: Phil Williams
-
 Purpose: This function receives an input form the get /api/item/delete route.
 And deletes the corresponding item from the DB and deletes the images from
 the upload directory. 
@@ -187,9 +175,6 @@ const deleteItem = async (req, res) => {
 };
 
 /*****************************************************************************
-Function: updateAvailability
-Author: Phil Williams
-
 Purpose: This function receives an input form the post
 /api/item/updateavailability route.The corresponding item is updated with
 the provided status.  
@@ -216,8 +201,6 @@ const updateAvailability = async (req, res) => {
 };
 
 /*****************************************************************************
-Function: notificationSocket
-Author: Phil Williams
 
 Purpose: Controls socket connections for the notifications name space
 ******************************************************************************/
@@ -226,8 +209,6 @@ const notificationSocket = (io) => {
     io.on("connection", onConnected);
 
     /*****************************************************************************
-Function: onConnected
-Author: Phil Williams
 
 Purpose: Code runs on new notification socket connection
 ******************************************************************************/
@@ -241,8 +222,7 @@ Purpose: Code runs on new notification socket connection
         socket.join(socket.userID); //creates a room based on the users ID
 
         /*****************************************************************************
-        Function: whoami
-        Author: Phil Williams
+
 
         Purpose: Sends the current users name 
         ******************************************************************************/
@@ -252,8 +232,6 @@ Purpose: Code runs on new notification socket connection
         });
 
         /*****************************************************************************
-        Function: lookingAt
-        Author: Phil Williams
 
         Purpose: Receives socket emit when someone looks at an item then send a message 
         to the item owner that someone is looking at that item.

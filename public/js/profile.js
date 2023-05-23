@@ -18,6 +18,7 @@ const displayUserDetails = () => {
             if (result.statusCode === 200) {
                 $("#user_name").text(result.data.user);
                 $("#location").text(result.data.location);
+                $("#faculty").text(result.data.faculty);
                 if (result.data.profileImg) {
                     $("#profile-img").attr(
                         "src",
