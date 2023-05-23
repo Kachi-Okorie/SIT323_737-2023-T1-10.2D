@@ -4,6 +4,7 @@ steps:
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
   - run
-  - --filename=https://github.com/Kachi-Okorie/SIT323_737-2023-T1-10.2D/k8sconfigfile.yaml
+  - --filename=https://github.com/Kachi-Okorie/SIT323_737-2023-T1-10.2D/blob/main/k8sconfigfile.yaml
   - --location=australia-southeast2
   - --cluster=kachi-cluster
+  
