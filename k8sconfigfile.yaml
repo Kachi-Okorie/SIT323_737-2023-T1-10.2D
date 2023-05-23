@@ -1,0 +1,43 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "hdprojectapp"
+  namespace: "default"
+  labels:
+    app: "hdprojectapp"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "hdprojectapp"
+  template:
+    metadata:
+      labels:
+        app: "hdprojectapp"
+    spec:
+      containers:
+      - name: "dustudentmeetupv2-sha256-1"
+        image: "australia-southeast2-docker.pkg.dev/sit737-23t1-okorie-158836a/kachisit73710d/dustudentmeetupv2@sha256:eb22f0f2db095a69e2733f17a61d896254c25d70fb34d1ff68992862fabbbceb"
+---
+apiVersion: "autoscaling/v2"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "hdprojectapp-hpa-bobr"
+  namespace: "default"
+  labels:
+    app: "hdprojectapp"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "hdprojectapp"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      target:
+        type: "Utilization"
+        averageUtilization: 80
